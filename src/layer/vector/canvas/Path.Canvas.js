@@ -106,7 +106,7 @@ L.Path = (L.Path.SVG && !window.L_PREFER_CANVAS) || !L.Browser.canvas ? L.Path :
 			if (options.fillOpacity < 1) {
 				ctx.globalAlpha = options.fillOpacity;
 			} else {
-			  // if we have differing stroke and fill alphas, reset
+			  // RHIZA if we have differing stroke and fill alphas, reset
 			  ctx.globalAlpha = 1.0;
 			}
 			ctx.fill();
@@ -116,7 +116,7 @@ L.Path = (L.Path.SVG && !window.L_PREFER_CANVAS) || !L.Browser.canvas ? L.Path :
 			if (options.opacity < 1) {
 				ctx.globalAlpha = options.opacity;
 			} else {
-			  // if we have differing stroke and fill alphas, reset
+			  // RHIZA if we have differing stroke and fill alphas, reset
 			  ctx.globalAlpha = 1.0;
 			}
 			ctx.stroke();

@@ -203,6 +203,12 @@ L.TileLayer = L.Class.extend({
 	_initContainer: function () {
 		var tilePane = this._map._panes.tilePane;
 
+	        // RHIZA HACK - wtf is this even supposed to mean? We could get here
+                // with tilePane.empty set to false, and we would never get a
+                // leaflet-layer div in our container
+		tilePane.empty = true;
+
+
 		if (!this._container || tilePane.empty) {
 			this._container = L.DomUtil.create('div', 'leaflet-layer');
 
